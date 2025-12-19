@@ -1,13 +1,27 @@
 import Link from 'next/link';
+import classes from './page.module.css';
+
 export default function Home() {
   return (
-    <main>
-      <h1 style={{ color: 'white', textAlign: 'center' }}>
-        Time to get started!
-      </h1>
-      <p><Link href="/meals">Meals</Link></p>
-      <p><Link href="/meals/share">Share Meal</Link></p>
-      <p><Link href="/community">Community</Link></p>
-    </main>
+    <>
+    <header className={classes.header}>
+      <div className={classes.slideshow}>
+        
+      </div>
+      <div className={classes.hero}>
+        <h1>Delicious meals, shared by a food-loving community.</h1>
+        <p>
+          Discover and share everyday cooking inspiration on NextLevel Food.
+          Find recipes, cooks, and how-tos to inspire your next meal.
+        </p>
+      </div>
+      <div className={classes.cta}>
+        <Link href="/community">Join the Community</Link>
+        <Link href="/meals">Explore Meals</Link>
+
+      </div>
+    </header>
+    <main></main>
+    </>
   );
 }
